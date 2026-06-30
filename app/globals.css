@@ -56,3 +56,20 @@ a {
   animation: pulse-gentle 4s ease-in-out infinite;
 }
 
+@keyframes hero-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.hero-marquee {
+  width: max-content;
+  animation: hero-marquee 28s linear infinite;
+}
+
+.hero-marquee:hover {
+  animation-play-state: paused;
+}

@@ -14,7 +14,7 @@ export default function Loading() {
         {/* Brand Logo with Gentle Pulse */}
         <div className="relative h-24 w-24 overflow-hidden animate-pulse-gentle">
           <Image
-            src="/images/logo-removebg.png"
+            src="/images/logo.png"
             alt="Wamira Global Logo"
             fill
             priority

@@ -1,38 +1,32 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown, X } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { services } from "@/data/services";
-import Button from "@/components/Button";
 
 export default function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
   const [servicesOpen, setServicesOpen] = useState(false);
+  const handleNavigate = () => {
+    setServicesOpen(false);
+    onClose();
+  };
 
   return (
     <AnimatePresence>
       {open && (
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 bg-ivory-warm p-6 md:hidden"
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: "auto", opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          className="absolute inset-x-0 top-full overflow-hidden border-t border-black/10 bg-ivory-warm shadow-xl md:hidden"
         >
-          <div className="flex items-center justify-between">
-            <div className="relative h-20 w-20 overflow-hidden">
-              <Image src="/images/logo-removebg.png" alt="Wamira Global" fill sizes="80px" className="object-contain" />
-            </div>
-            <button aria-label="Close menu" onClick={onClose} className="text-teal-deep">
-              <X className="h-7 w-7" />
-            </button>
-          </div>
-          <nav className="mt-10 flex flex-col gap-5 text-lg text-teal-deep">
-            <Link onClick={onClose} href="/about">About Us</Link>
+          <nav className="mx-auto flex max-h-[calc(100svh-6rem)] max-w-7xl flex-col overflow-y-auto px-5 py-6 text-lg text-teal-deep">
+            <Link onClick={handleNavigate} href="/about">About Us</Link>
             <button
               onClick={() => setServicesOpen((value) => !value)}
-              className="flex items-center justify-between text-left"
+              className="mt-6 flex items-center justify-between text-left"
             >
               Services <ChevronDown className={`h-5 w-5 transition ${servicesOpen ? "rotate-180" : ""}`} />
             </button>
@@ -42,23 +36,29 @@ export default function MobileMenu({ open, onClose }: { open: boolean; onClose: 
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
-                  className="overflow-hidden border-l border-gold-champagne/30 pl-4"
+                  className="mt-4 overflow-hidden border-y border-black/10 py-3 pl-4"
                 >
-                  <Link onClick={onClose} href="/services" className="mb-3 block text-sm text-gold-champagne">
+                  <Link onClick={handleNavigate} href="/services" className="block py-2 text-sm font-semibold text-gold-champagne">
                     All Services
                   </Link>
                   {services.map((service) => (
-                    <Link key={service.slug} onClick={onClose} href={`/services/${service.slug}`} className="mb-3 block text-sm text-muted">
+                    <Link key={service.slug} onClick={handleNavigate} href={`/services/${service.slug}`} className="block py-2 text-sm font-medium text-charcoal transition hover:text-gold-champagne">
                       {service.title}
                     </Link>
                   ))}
                 </motion.div>
               )}
             </AnimatePresence>
-            <Link onClick={onClose} href="/our-approach">Our Approach</Link>
-            <Link onClick={onClose} href="/resources">Resources</Link>
-            <Link onClick={onClose} href="/contact">Contact Us</Link>
-            <Button href="/contact" className="mt-4">Get In Touch</Button>
+            <Link onClick={handleNavigate} href="/our-approach" className="mt-6">Our Approach</Link>
+            <Link onClick={handleNavigate} href="/resources" className="mt-6">Resources</Link>
+            <Link onClick={handleNavigate} href="/contact" className="mt-6">Contact Us</Link>
+            <Link
+              onClick={handleNavigate}
+              href="/contact"
+              className="mt-8 inline-flex min-h-11 items-center justify-center gap-2 rounded-sm bg-teal-deep px-5 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-gold-champagne"
+            >
+              Get In Touch
+            </Link>
           </nav>
         </motion.div>
       )}

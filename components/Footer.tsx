@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
         <div>
           <div className="relative h-36 w-36 overflow-hidden">
-            <Image src="/images/logo-removebg.png" alt="Wamira Global" fill sizes="144px" className="object-contain filter brightness-110" />
+            <Image src="/images/logo.png" alt="Wamira Global" fill sizes="144px" className="object-contain filter brightness-110" />
           </div>
           <p className="mt-5 max-w-sm text-sm leading-7 text-white/70">
             Delivering bespoke corporate structuring and business setup solutions in the UAE with 

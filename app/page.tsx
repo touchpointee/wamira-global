@@ -36,43 +36,87 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen overflow-hidden pt-32 flex items-center">
+      <section className="relative flex min-h-[100svh] overflow-hidden pt-24 lg:h-[100svh] lg:items-center">
         <Image src={images.hero} alt="Luxury corporate offices in Dubai" fill priority className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-teal-dark via-teal-dark/85 to-teal-dark/40" />
         <div className="absolute inset-0 bg-luxury-radial opacity-60" />
         
-        <div className="relative mx-auto w-full max-w-7xl px-5 py-20 md:py-32 z-10">
-          <div className="max-w-4xl">
-            <div className="mb-6 flex items-center gap-3">
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-12 pt-8 sm:pb-28 md:pt-10 lg:pb-24">
+          <div className="sm:hidden">
+            <div className="mb-4 flex items-center gap-3">
+              <span className="h-px w-8 bg-gold-champagne/70" />
+              <p className="text-[11px] font-bold uppercase tracking-[0.26em] text-gold-champagne">
+                Wamira Global
+              </p>
+            </div>
+
+            <h1 className="font-serif text-[2.9rem] leading-[0.95] text-white">
+              UAE Business <span className="block text-gold-champagne">Setup</span>
+            </h1>
+
+            <p className="mt-4 font-serif text-xl italic leading-snug text-white/90">
+              Strategic planning. Institutional execution. One accountable partner.
+            </p>
+
+            <p className="mt-5 text-[15px] leading-7 text-white/82">
+              We help founders, trading enterprises, and family offices establish UAE corporate structures with discretion, compliance, and operational clarity.
+            </p>
+
+            <div className="mt-5 grid grid-cols-2 gap-2">
+              {[
+                "Licensing",
+                "Banking",
+                "Tax strategy",
+                "Residency visas"
+              ].map((item) => (
+                <div key={item} className="border border-white/15 bg-teal-dark/55 px-3 py-2 text-xs font-semibold text-white/90 backdrop-blur-sm">
+                  {item}
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-6 flex flex-col gap-3">
+              <Button href="/contact" className="w-full">Private Consultation</Button>
+              <Button href="/services" variant="secondary" className="w-full border-white text-white hover:bg-white/10">View Services</Button>
+            </div>
+          </div>
+
+          <div className="hidden max-w-3xl sm:block">
+            <div className="mb-4 flex items-center gap-3">
               <span className="h-px w-8 bg-gold-champagne/60" />
               <p className="text-xs font-bold uppercase tracking-[0.3em] text-gold-champagne">
                 Wamira Global <span className="text-white/40 font-normal">|</span> <span className="italic font-serif normal-case font-medium tracking-normal text-white/90">Building Legacies.</span>
               </p>
             </div>
             
-            <h1 className="font-serif text-5xl leading-[1.05] text-white sm:text-6xl md:text-8xl">
+            <h1 className="font-serif text-4xl leading-[1.02] text-white sm:text-5xl md:text-6xl xl:text-7xl">
               Corporate Structuring <br />
               <span className="text-gold-champagne">& UAE Business Setup</span>
             </h1>
             
-            <h2 className="mt-8 font-serif text-xl md:text-3xl text-white/90 italic leading-relaxed max-w-3xl">
+            <h2 className="mt-5 max-w-3xl font-serif text-lg italic leading-relaxed text-white/90 md:text-2xl">
               Strategic planning. Institutional execution. One point of contact.
             </h2>
             
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-white/80">
+            <p className="mt-5 max-w-2xl text-base leading-7 text-white/80">
               Wamira Global assists international founders, trading enterprises, and family offices in 
               establishing their corporate presence in the UAE. Whether you require a standard commercial 
               operating company, a holding structure, or asset protection, we manage the entire process with 
               absolute discretion.
             </p>
             
-            <p className="mt-4 max-w-2xl text-lg leading-8 text-white/80">
-              We handle corporate licensing, tax compliance strategy, bank account coordination, and 
-              residency visas under a single point of accountability. You focus on your commercial objectives; 
-              we manage the regulatory framework and deliver an operationally ready business.
-            </p>
+            <div className="mt-5 hidden max-w-3xl overflow-hidden border-y border-white/15 bg-teal-dark/45 py-3 backdrop-blur-sm sm:block">
+              <div className="hero-marquee flex whitespace-nowrap text-sm font-medium text-white/85">
+                <span className="pr-12">
+                  We handle corporate licensing, tax compliance strategy, bank account coordination, and residency visas under a single point of accountability. You focus on your commercial objectives; we manage the regulatory framework and deliver an operationally ready business.
+                </span>
+                <span className="pr-12" aria-hidden="true">
+                  We handle corporate licensing, tax compliance strategy, bank account coordination, and residency visas under a single point of accountability. You focus on your commercial objectives; we manage the regulatory framework and deliver an operationally ready business.
+                </span>
+              </div>
+            </div>
             
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row items-start sm:items-center">
+            <div className="mt-7 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
               <Button href="/contact">Arrange a Private Consultation</Button>
               <Button href="/services" variant="secondary" className="border-white text-white hover:bg-white/10">Discover Our Services</Button>
             </div>
@@ -83,7 +127,7 @@ export default function HomePage() {
         <div className="absolute inset-x-0 bottom-0 hidden lg:block border-t border-white/10 bg-teal-dark/65 backdrop-blur-xl z-20">
           <div className="mx-auto grid max-w-7xl grid-cols-4 divide-x divide-white/10">
             {trustFeatures.map((feature) => (
-              <div key={feature.title} className="flex items-center gap-4 p-6">
+              <div key={feature.title} className="flex items-center gap-4 p-4">
                 <feature.icon className="h-6 w-6 text-gold-champagne shrink-0" />
                 <div>
                   <h3 className="text-sm font-semibold text-white">{feature.title}</h3>
