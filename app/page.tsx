@@ -39,6 +39,7 @@ export default function HomePage() {
       <section className="relative flex min-h-[100svh] overflow-hidden pt-24 lg:h-[100svh] lg:items-center">
         <Image src={images.hero} alt="Luxury corporate offices in Dubai" fill priority className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-teal-dark via-teal-dark/85 to-teal-dark/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-teal-dark/75 via-teal-dark/55 to-teal-dark/90 sm:hidden" />
         <div className="absolute inset-0 bg-luxury-radial opacity-60" />
         
         <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-12 pt-8 sm:pb-28 md:pt-10 lg:pb-24">
@@ -58,7 +59,7 @@ export default function HomePage() {
               Strategic planning. Institutional execution. One accountable partner.
             </p>
 
-            <p className="mt-5 text-[15px] leading-7 text-white/82">
+            <p className="mt-5 text-[15px] font-medium leading-7 text-white/90">
               We help founders, trading enterprises, and family offices establish UAE corporate structures with discretion, compliance, and operational clarity.
             </p>
 
@@ -74,6 +75,10 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
+
+            <p className="mt-4 border-l-2 border-gold-champagne bg-teal-dark/55 px-3 py-3 text-xs font-medium leading-5 text-white/85 backdrop-blur-sm">
+              We handle corporate licensing, tax compliance strategy, bank account coordination, and residency visas under one point of accountability.
+            </p>
 
             <div className="mt-6 flex flex-col gap-3">
               <Button href="/contact" className="w-full">Private Consultation</Button>
