@@ -12,7 +12,7 @@ import { services } from "@/data/services";
 
 const links = [
   { href: "/about", label: "About Us" },
-  { href: "/family-office", label: "Family Office" },
+  { href: "/our-approach", label: "Our Approach" },
   { href: "/resources", label: "Resources" },
   { href: "/contact", label: "Contact Us" }
 ];

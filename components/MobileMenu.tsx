@@ -55,7 +55,7 @@ export default function MobileMenu({ open, onClose }: { open: boolean; onClose: 
                 </motion.div>
               )}
             </AnimatePresence>
-            <Link onClick={onClose} href="/family-office">Family Office</Link>
+            <Link onClick={onClose} href="/our-approach">Our Approach</Link>
             <Link onClick={onClose} href="/resources">Resources</Link>
             <Link onClick={onClose} href="/contact">Contact Us</Link>
             <Button href="/contact" className="mt-4">Get In Touch</Button>
