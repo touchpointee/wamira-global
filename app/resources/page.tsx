@@ -27,11 +27,11 @@ export default async function ResourcesPage() {
       <section className="mx-auto max-w-7xl px-5 py-20">
         <div className="mb-10 text-center">
           <SectionLabel>Insights</SectionLabel>
-          <h2 className="font-serif text-5xl text-ivory">Guidance for Global Lives</h2>
+          <h2 className="font-serif text-5xl text-teal-deep">Guidance for Global Lives</h2>
         </div>
         <div className="mb-10 flex flex-wrap justify-center gap-3">
           {["All", "Insights", "Guides", "News"].map((tab) => (
-            <span key={tab} className="rounded-sm border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-muted first:border-gold/50 first:text-gold-light">
+            <span key={tab} className="rounded-sm border border-black/5 bg-white px-4 py-2 text-sm text-muted first:border-gold-champagne/50 first:text-gold-champagne">
               {tab}
             </span>
           ))}
@@ -41,8 +41,8 @@ export default async function ResourcesPage() {
         </div>
       </section>
       <section className="mx-auto max-w-7xl px-5 pb-20">
-        <div className="rounded border border-gold/35 bg-white/[0.04] px-6 py-12 text-center">
-          <h2 className="font-serif text-4xl text-ivory">Stay Informed</h2>
+        <div className="rounded border border-gold-champagne/30 bg-cream-soft px-6 py-12 text-center">
+          <h2 className="font-serif text-4xl text-teal-deep">Stay Informed</h2>
           <p className="mt-3 text-muted">Subscribe to receive the latest insights and updates.</p>
           <NewsletterForm />
         </div>

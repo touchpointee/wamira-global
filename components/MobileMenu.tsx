@@ -18,17 +18,17 @@ export default function MobileMenu({ open, onClose }: { open: boolean; onClose: 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 bg-obsidian p-6 md:hidden"
+          className="fixed inset-0 z-50 bg-ivory-warm p-6 md:hidden"
         >
           <div className="flex items-center justify-between">
             <div className="relative h-20 w-20 overflow-hidden">
               <Image src="/images/logo-removebg.png" alt="Wamira Global" fill sizes="80px" className="object-contain" />
             </div>
-            <button aria-label="Close menu" onClick={onClose} className="text-ivory">
+            <button aria-label="Close menu" onClick={onClose} className="text-teal-deep">
               <X className="h-7 w-7" />
             </button>
           </div>
-          <nav className="mt-10 flex flex-col gap-5 text-lg text-ivory">
+          <nav className="mt-10 flex flex-col gap-5 text-lg text-teal-deep">
             <Link onClick={onClose} href="/about">About Us</Link>
             <button
               onClick={() => setServicesOpen((value) => !value)}
@@ -42,9 +42,9 @@ export default function MobileMenu({ open, onClose }: { open: boolean; onClose: 
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
-                  className="overflow-hidden border-l border-gold/30 pl-4"
+                  className="overflow-hidden border-l border-gold-champagne/30 pl-4"
                 >
-                  <Link onClick={onClose} href="/services" className="mb-3 block text-sm text-gold-light">
+                  <Link onClick={onClose} href="/services" className="mb-3 block text-sm text-gold-champagne">
                     All Services
                   </Link>
                   {services.map((service) => (

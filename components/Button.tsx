@@ -11,9 +11,9 @@ type Props = {
 
 const styles = {
   primary:
-    "bg-gold text-[#071312] shadow-gold hover:bg-gold-light hover:-translate-y-0.5",
+    "bg-teal-deep text-white shadow-md hover:bg-gold-champagne hover:-translate-y-0.5",
   secondary:
-    "border border-gold/50 text-gold hover:bg-gold/10 hover:border-gold hover:-translate-y-0.5"
+    "border border-teal-deep text-teal-deep hover:bg-teal-deep/5 hover:-translate-y-0.5"
 };
 
 export default function Button({ href, variant = "primary", children, className = "", ...props }: Props) {

@@ -29,16 +29,16 @@ export default function ContactPage() {
       <section className="mx-auto grid max-w-7xl gap-12 px-5 py-20 lg:grid-cols-[0.85fr_1.15fr]">
         <div>
           <SectionLabel>Contact Us</SectionLabel>
-          <h2 className="font-serif text-5xl text-ivory">Speak With Our Team</h2>
+          <h2 className="font-serif text-5xl text-teal-deep">Speak With Our Team</h2>
           <p className="mt-5 text-lg leading-8 text-muted">
             Whether you require private office support, lifestyle management, global mobility, or bespoke concierge services, our team is available to assist with discretion and care.
           </p>
           <div className="mt-10 grid gap-4">
             {contact.map((item) => (
-              <div key={item.label} className="flex gap-4 rounded border border-white/10 bg-white/[0.04] p-5">
-                <item.icon className="h-6 w-6 text-gold" />
+              <div key={item.label} className="flex gap-4 rounded border border-black/5 bg-white p-5 shadow-dark">
+                <item.icon className="h-6 w-6 text-gold-champagne" />
                 <div>
-                  <h3 className="font-semibold text-ivory">{item.label}</h3>
+                  <h3 className="font-semibold text-teal-deep">{item.label}</h3>
                   <p className="text-sm text-muted">{item.value}</p>
                 </div>
               </div>

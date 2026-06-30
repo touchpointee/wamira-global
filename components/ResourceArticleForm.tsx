@@ -77,7 +77,7 @@ export default function ResourceArticleForm({ article }: { article?: AdminResour
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="grid gap-5 rounded border border-white/10 bg-white/[0.04] p-6 shadow-dark">
+    <form onSubmit={handleSubmit(onSubmit)} className="grid gap-5 rounded border border-black/5 bg-white p-6 shadow-dark">
       <Field label="Title" error={errorMessage("title")}>
         <input
           {...register("title")}
@@ -114,7 +114,7 @@ export default function ResourceArticleForm({ article }: { article?: AdminResour
         </Field>
       </div>
       <label className="flex items-center gap-3 text-sm text-muted">
-        <input type="checkbox" {...register("isPublished")} className="h-4 w-4 accent-gold" />
+        <input type="checkbox" {...register("isPublished")} className="h-4 w-4 accent-gold-champagne" />
         Published on public Resources page
       </label>
       {serverError && <p className="text-sm text-red-300">{serverError}</p>}
@@ -141,8 +141,8 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="mb-2 block text-sm font-semibold text-ivory">{label}</span>
-      <div className="[&_input]:w-full [&_input]:rounded-sm [&_input]:border [&_input]:border-white/10 [&_input]:bg-obsidian/70 [&_input]:px-4 [&_input]:py-3 [&_input]:text-ivory [&_input]:outline-none [&_input]:transition [&_input]:focus:border-gold/60 [&_select]:w-full [&_select]:rounded-sm [&_select]:border [&_select]:border-white/10 [&_select]:bg-obsidian/70 [&_select]:px-4 [&_select]:py-3 [&_select]:text-ivory [&_select]:outline-none [&_select]:focus:border-gold/60 [&_textarea]:w-full [&_textarea]:rounded-sm [&_textarea]:border [&_textarea]:border-white/10 [&_textarea]:bg-obsidian/70 [&_textarea]:px-4 [&_textarea]:py-3 [&_textarea]:text-ivory [&_textarea]:outline-none [&_textarea]:focus:border-gold/60">
+      <span className="mb-2 block text-sm font-semibold text-teal-deep">{label}</span>
+      <div className="[&_input]:w-full [&_input]:rounded-sm [&_input]:border [&_input]:border-black/10 [&_input]:bg-ivory-warm [&_input]:px-4 [&_input]:py-3 [&_input]:text-charcoal [&_input]:outline-none [&_input]:transition [&_input]:focus:border-gold-champagne/60 [&_select]:w-full [&_select]:rounded-sm [&_select]:border [&_select]:border-black/10 [&_select]:bg-ivory-warm [&_select]:px-4 [&_select]:py-3 [&_select]:text-charcoal [&_select]:outline-none [&_select]:focus:border-gold-champagne/60 [&_textarea]:w-full [&_textarea]:rounded-sm [&_textarea]:border [&_textarea]:border-black/10 [&_textarea]:bg-ivory-warm [&_textarea]:px-4 [&_textarea]:py-3 [&_textarea]:text-charcoal [&_textarea]:outline-none [&_textarea]:focus:border-gold-champagne/60">
         {React.cloneElement(children, { placeholder: label })}
       </div>
       {error && <span className="mt-2 block text-xs text-red-300">{error}</span>}

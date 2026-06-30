@@ -2,12 +2,12 @@ import Link from "next/link";
 
 export default function Breadcrumb({ current }: { current: string }) {
   return (
-    <div className="mt-4 flex items-center gap-3 text-xs text-muted">
-      <Link href="/" className="transition hover:text-gold-light">
+    <div className="mt-4 flex items-center gap-3 text-xs text-white/60">
+      <Link href="/" className="transition hover:text-gold-champagne">
         Home
       </Link>
-      <span className="text-gold/70">/</span>
-      <span className="text-ivory">{current}</span>
+      <span className="text-gold-champagne/70">/</span>
+      <span className="text-white/90">{current}</span>
     </div>
   );
 }

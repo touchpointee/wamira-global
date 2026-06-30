@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 * {
@@ -16,10 +16,8 @@ html {
 
 body {
   margin: 0;
-  background:
-    radial-gradient(circle at top left, rgba(201, 154, 91, 0.12), transparent 28rem),
-    linear-gradient(180deg, #071312 0%, #0b1715 45%, #071312 100%);
-  color: #f7f0e6;
+  background: #FBF6F0;
+  color: #1E2A2B;
 }
 
 ::selection {

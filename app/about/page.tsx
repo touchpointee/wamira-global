@@ -44,7 +44,7 @@ export default function AboutPage() {
         <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-7">
             <SectionLabel>Our Identity</SectionLabel>
-            <h2 className="mt-4 font-serif text-4xl md:text-5xl text-ivory leading-tight">
+            <h2 className="mt-4 font-serif text-4xl md:text-5xl text-teal-deep leading-tight">
               A private corporate coordination office based in Dubai.
             </h2>
             <p className="mt-8 text-lg leading-8 text-muted">
@@ -58,20 +58,20 @@ export default function AboutPage() {
             </p>
           </div>
           
-          <div className="relative min-h-[380px] overflow-hidden rounded border border-white/10 lg:col-span-5 bg-white/[0.02]">
-            <Image src={images.office} alt="Bespoke private office interior" fill className="object-cover opacity-80" />
-            <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent" />
+          <div className="relative min-h-[380px] overflow-hidden rounded border border-black/5 lg:col-span-5 bg-white shadow-dark">
+            <Image src={images.office} alt="Bespoke private office interior" fill className="object-cover opacity-90" />
+            <div className="absolute inset-0 bg-gradient-to-t from-cream-soft via-transparent to-transparent" />
           </div>
         </div>
       </section>
 
       {/* Why We Exist Section */}
-      <section className="bg-midnight/60 py-24 border-y border-white/5">
+      <section className="bg-cream-soft py-24 border-y border-black/5">
         <div className="mx-auto max-w-7xl px-5">
           <div className="mx-auto mb-16 max-w-3xl text-center">
             <SectionLabel>Operating Framework</SectionLabel>
-            <h2 className="font-serif text-4xl md:text-5xl text-ivory">
-              Why Wamira Global <span className="text-gold-light">Exists</span>
+            <h2 className="font-serif text-4xl md:text-5xl text-teal-deep">
+              Why Wamira Global <span className="text-gold-champagne">Exists</span>
             </h2>
             <p className="mt-5 text-muted">
               We replace administrative friction with unified leadership and strict regulatory alignment.
@@ -80,11 +80,11 @@ export default function AboutPage() {
 
           <div className="grid gap-6 md:grid-cols-3">
             {reasons.map((reason) => (
-              <div key={reason.title} className="rounded border border-white/10 bg-obsidian p-8 transition duration-300 hover:border-gold/30">
-                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded bg-gold/10 text-gold-light">
+              <div key={reason.title} className="rounded border border-black/5 bg-white p-8 transition duration-300 hover:border-gold-champagne/40">
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded bg-gold-champagne/10 text-gold-champagne">
                   <reason.icon className="h-6 w-6" />
                 </div>
-                <h3 className="mb-4 font-serif text-2xl text-ivory">{reason.title}</h3>
+                <h3 className="mb-4 font-serif text-2xl text-charcoal group-hover:text-teal-deep transition">{reason.title}</h3>
                 <p className="text-sm leading-7 text-muted">{reason.text}</p>
               </div>
             ))}
@@ -94,11 +94,11 @@ export default function AboutPage() {
 
       {/* Confidentiality & Engagement Section */}
       <section className="mx-auto max-w-5xl px-5 py-24 text-center">
-        <div className="rounded border border-gold/20 bg-white/[0.02] p-8 md:p-12 shadow-dark">
-          <div className="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-gold/10 text-gold">
+        <div className="rounded border border-gold-champagne/30 bg-white p-8 md:p-12 shadow-dark">
+          <div className="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-gold-champagne/10 text-gold-champagne">
             <ShieldAlert className="h-6 w-6" />
           </div>
-          <h2 className="font-serif text-3xl text-ivory">Confidentiality & Engagement</h2>
+          <h2 className="font-serif text-3xl text-teal-deep">Confidentiality & Engagement</h2>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-muted">
             Mutual confidentiality is observed from first contact, and formal NDAs are provided on request. 
             We accept a limited number of client engagements annually where discretion, proper structure, 

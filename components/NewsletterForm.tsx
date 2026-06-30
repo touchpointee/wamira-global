@@ -40,10 +40,10 @@ export default function NewsletterForm() {
           type="email"
           placeholder="Enter your email"
           {...register("email")}
-          className="w-full rounded-sm border border-white/10 bg-obsidian/70 px-4 py-3 text-ivory outline-none transition placeholder:text-muted focus:border-gold/60"
+          className="w-full rounded-sm border border-black/10 bg-white px-4 py-3 text-charcoal outline-none transition placeholder:text-muted focus:border-gold-champagne/60"
         />
         {errors.email && <p className="mt-2 text-left text-xs text-red-300">{errors.email.message}</p>}
-        {message && <p className="mt-2 text-left text-xs text-gold-light">{message}</p>}
+        {message && <p className="mt-2 text-left text-xs text-gold-champagne">{message}</p>}
         {error && <p className="mt-2 text-left text-xs text-red-300">{error}</p>}
       </div>
       <Button type="submit" disabled={isSubmitting}>

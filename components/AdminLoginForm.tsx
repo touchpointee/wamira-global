@@ -33,14 +33,14 @@ export default function AdminLoginForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="mx-auto mt-8 max-w-md rounded border border-white/10 bg-white/[0.04] p-6 shadow-dark">
+    <form onSubmit={onSubmit} className="mx-auto mt-8 max-w-md rounded border border-black/5 bg-white p-6 shadow-dark">
       <label className="block text-left">
-        <span className="mb-2 block text-sm font-semibold text-ivory">Admin Password</span>
+        <span className="mb-2 block text-sm font-semibold text-teal-deep">Admin Password</span>
         <input
           type="password"
           value={password}
           onChange={(event) => setPassword(event.target.value)}
-          className="w-full rounded-sm border border-white/10 bg-obsidian/70 px-4 py-3 text-ivory outline-none transition focus:border-gold/60"
+          className="w-full rounded-sm border border-black/10 bg-ivory-warm px-4 py-3 text-charcoal outline-none transition focus:border-gold-champagne/60"
           required
         />
       </label>

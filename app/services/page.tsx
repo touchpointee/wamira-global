@@ -3,7 +3,6 @@ import Link from "next/link";
 import { ArrowRight, Info, CheckCircle2, ShieldCheck, Briefcase, Building, Plane, Home } from "lucide-react";
 import CTASection from "@/components/CTASection";
 import PageHero from "@/components/PageHero";
-import SectionLabel from "@/components/SectionLabel";
 import { images } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -66,13 +65,13 @@ export default function ServicesPage() {
       
       <section className="mx-auto max-w-7xl px-5 py-24">
         {/* Introductory Note */}
-        <div className="mb-20 rounded border border-gold/30 bg-gradient-to-r from-white/[0.04] to-transparent p-8 md:p-10 shadow-dark">
+        <div className="mb-20 rounded border border-gold-champagne/30 bg-white p-8 md:p-10 shadow-dark">
           <div className="flex flex-col md:flex-row gap-6 items-start">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded bg-gold/10 text-gold-light">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded bg-gold-champagne/10 text-gold-champagne">
               <Info className="h-6 w-6" />
             </div>
             <div>
-              <h3 className="font-serif text-2xl text-ivory mb-3">Unified Coordination</h3>
+              <h3 className="font-serif text-2xl text-teal-deep mb-3">Unified Coordination</h3>
               <p className="text-lg leading-8 text-muted max-w-4xl">
                 We manage your entire engagement under one roof. When highly specialized cross-border 
                 tax or legal expertise is required, we integrate our vetted network behind the scenes. 
@@ -89,21 +88,21 @@ export default function ServicesPage() {
             return (
               <div 
                 key={service.slug} 
-                className="group relative rounded border border-white/10 bg-white/[0.02] p-8 md:p-12 shadow-dark transition duration-300 hover:border-gold/35"
+                className="group relative rounded border border-black/5 bg-white p-8 md:p-12 shadow-dark transition duration-300 hover:border-gold-champagne/40"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
                   <div className="space-y-4 max-w-3xl">
                     <div className="flex items-center gap-4">
-                      <span className="font-serif text-sm font-semibold tracking-widest text-gold">
+                      <span className="font-serif text-sm font-semibold tracking-widest text-gold-champagne">
                         SERVICE {service.num}
                       </span>
-                      <span className="h-px w-6 bg-white/20" />
-                      <div className="flex h-8 w-8 items-center justify-center rounded bg-gold/5 text-gold-light">
+                      <span className="h-px w-6 bg-black/10" />
+                      <div className="flex h-8 w-8 items-center justify-center rounded bg-gold-champagne/5 text-gold-champagne">
                         <Icon className="h-4 w-4" />
                       </div>
                     </div>
                     
-                    <h3 className="font-serif text-3xl text-ivory">{service.title}</h3>
+                    <h3 className="font-serif text-3xl text-teal-deep">{service.title}</h3>
                     
                     <div className="grid gap-6 md:grid-cols-2 pt-4">
                       <div>
@@ -111,12 +110,12 @@ export default function ServicesPage() {
                         <p className="text-muted leading-7 text-sm">{service.deliver}</p>
                       </div>
                       
-                      <div className="rounded bg-gold/5 p-4 border border-gold/10">
+                      <div className="rounded bg-cream-soft p-4 border border-gold-champagne/10">
                         <div className="flex items-center gap-2 mb-2">
-                          <CheckCircle2 className="h-4 w-4 text-gold" />
-                          <p className="text-xs uppercase tracking-widest text-gold-light font-bold">The Outcome</p>
+                          <CheckCircle2 className="h-4 w-4 text-gold-champagne" />
+                          <p className="text-xs uppercase tracking-widest text-teal-deep font-bold">The Outcome</p>
                         </div>
-                        <p className="text-gold-light/90 leading-6 text-sm">{service.outcome}</p>
+                        <p className="text-charcoal leading-6 text-sm font-medium">{service.outcome}</p>
                       </div>
                     </div>
                   </div>
@@ -124,7 +123,7 @@ export default function ServicesPage() {
                   <div className="shrink-0 pt-4 lg:pt-0">
                     <Link 
                       href={`/services/${service.slug}`} 
-                      className="inline-flex items-center gap-2 rounded border border-gold/40 px-5 py-3 text-sm font-semibold text-gold-light transition hover:bg-gold/10"
+                      className="inline-flex items-center gap-2 rounded border border-gold-champagne/45 px-5 py-3 text-sm font-semibold text-gold-champagne transition hover:bg-gold-champagne/10"
                     >
                       Explore Details <ArrowRight className="h-4 w-4" />
                     </Link>
