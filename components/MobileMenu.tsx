@@ -18,7 +18,7 @@ export default function MobileMenu({ open, onClose }: { open: boolean; onClose: 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 bg-obsidian/98 p-6 md:hidden"
+          className="fixed inset-0 z-50 bg-obsidian p-6 md:hidden"
         >
           <div className="flex items-center justify-between">
             <div className="relative h-20 w-20 overflow-hidden">
