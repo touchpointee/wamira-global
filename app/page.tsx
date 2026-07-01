@@ -72,21 +72,28 @@ export default function HomePage() {
         <div className="absolute left-[34%] top-0 hidden h-full w-[38%] rounded-full border-[70px] border-white/[0.035] lg:block" />
         <div className="relative z-10 mx-auto flex w-full max-w-[1440px] items-center px-6 pb-8 md:px-16 xl:px-20 lg:h-full">
           <div className="w-full max-w-[760px]">
-            <div className="mb-5 flex items-center gap-3">
-              <span className="h-px w-8 bg-gold-champagne" />
-              <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-gold-champagne sm:text-[12px]">
-                The Legacy Standard
+            <div className="relative border-l border-gold-champagne/40 pl-6 sm:pl-8">
+              {/* Tagline */}
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-gold-champagne/25 bg-white/5 px-3.5 py-1.5 backdrop-blur-md">
+                <span className="h-1.5 w-1.5 rounded-full bg-gold-champagne animate-pulse" />
+                <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-gold-champagne sm:text-[11px]">The Legacy Standard</span>
+              </div>
+              
+              {/* Brand Descriptor */}
+              <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-white/90 sm:text-[13px] mb-3">
+                Strategic UAE Market Entry, Structuring & Private Coordination
               </p>
+              
+              {/* Title */}
+              <h1 className="font-serif text-[32px] xs:text-[36px] sm:text-[42px] leading-[1.06] text-white md:text-[50px] lg:text-[56px] xl:text-[62px]">
+                Strategic UAE Entry.
+                <br />
+                Built for Legacy.
+              </h1>
             </div>
-            <h1 className="max-w-[760px] font-serif text-[32px] xs:text-[36px] sm:text-[40px] leading-[1.08] text-white md:text-[48px] lg:text-[54px] xl:text-[60px]">
-              Strategic UAE Entry.
-              <br />
-              Built for Legacy.
-            </h1>
-            <p className="mt-4 text-[13px] font-semibold uppercase tracking-wider text-gold-champagne/90 sm:text-[14px] max-w-[680px]">
-              Strategic UAE Market Entry, Structuring & Private Coordination
-            </p>
-            <div className="mt-6 max-w-[600px] space-y-4 text-[14px] leading-relaxed text-white/80 sm:mt-7 sm:text-[15px] sm:leading-8">
+
+            {/* Paragraph copy */}
+            <div className="mt-8 pl-6 sm:pl-8 max-w-[620px] space-y-4 text-[14px] leading-relaxed text-white/80 sm:mt-9 sm:text-[15px] sm:leading-8">
               <p>
                 Wamira Global provides strategic coordination for founders, family offices, and investors entering the UAE.
               </p>
@@ -97,7 +104,9 @@ export default function HomePage() {
                 Through a single, discreet point of coordination, we align the necessary expertise to help you build with clarity and intent.
               </p>
             </div>
-            <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4">
+
+            {/* Call to Actions */}
+            <div className="mt-8 pl-6 sm:pl-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:gap-4">
               <Button href="/advisory" className="min-w-[136px] justify-center px-6 text-[12px] uppercase tracking-[0.14em]">Our Advisory</Button>
               <Button href="/contact" variant="secondary" className="min-w-[270px] justify-center border-gold-champagne px-6 text-[12px] text-white hover:bg-gold-champagne/10 uppercase tracking-[0.14em]">
                 Schedule a Private Consultation
