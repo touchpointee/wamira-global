@@ -75,19 +75,25 @@ export default function HomePage() {
             <div className="mb-5 flex items-center gap-4">
               <span className="h-px w-12 bg-gold-champagne" />
               <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-gold-champagne sm:text-[13px]">
-                Private Advisory. Strategic Impact.
+                Strategic UAE Market Entry, Structuring & Private Coordination
               </p>
             </div>
             <h1 className="max-w-[760px] font-serif text-[28px] xs:text-[32px] sm:text-[38px] leading-[1.1] text-white md:text-[46px] lg:text-[52px] xl:text-[56px]">
-              Strategic <span className="text-gold-champagne">UAE</span> Market Entry,
+              Strategic UAE Entry.
               <br />
-              Structuring & Investment
-              <br />
-              Coordination
+              Built for Legacy.
             </h1>
-            <p className="mt-5 max-w-[600px] text-[14px] leading-relaxed text-white/90 sm:mt-7 sm:text-[15px] sm:leading-8">
-              Wamira Global is a private advisory office guiding founders, family offices, and HNI investors through market entry, structuring, and investment opportunities across the UAE.
-            </p>
+            <div className="mt-5 max-w-[600px] space-y-4 text-[14px] leading-relaxed text-white/90 sm:mt-7 sm:text-[15px] sm:leading-8">
+              <p>
+                Wamira Global provides strategic coordination for founders, family offices, and investors entering the UAE.
+              </p>
+              <p>
+                We move beyond standard setup to build structures centered on ownership, continuity, and long-term value.
+              </p>
+              <p>
+                Through a single, discreet point of coordination, we align the necessary expertise to help you build with clarity and intent.
+              </p>
+            </div>
             <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4">
               <Button href="/advisory" className="min-w-[136px] justify-center px-6 text-[12px] uppercase tracking-[0.14em]">Our Advisory</Button>
               <Button href="/contact" variant="secondary" className="min-w-[270px] justify-center border-gold-champagne px-6 text-[12px] text-white hover:bg-gold-champagne/10 uppercase tracking-[0.14em]">
@@ -112,18 +118,41 @@ export default function HomePage() {
               <span className="mb-4 h-px w-9 bg-gold-champagne" />
             </div>
             <h2 className="font-serif text-[38px] leading-[1.05] text-charcoal md:text-[48px]">
-              A Private Advisory Office
+              Beyond Setup.
               <br />
-              Built on Trust, Insight & Execution.
+              Built With Strategic Clarity.
             </h2>
             <div className="mt-6 max-w-[630px] space-y-4 text-[15px] leading-8 text-charcoal/80">
-              <p>We serve as a discreet partner to ambitious founders, established businesses, and sophisticated investors seeking to establish, expand, or optimize their presence in the UAE.</p>
-              <p>Our role is to simplify complexity, aligning regulatory precision, commercial strategy, and institutional networks to unlock long-term value with confidence.</p>
+              <p>Entering the UAE market is a significant step that requires a clear blueprint and a trusted professional network.</p>
+              <p>Wamira Global coordinates your operating, holding, and governance requirements into a unified framework.</p>
+              <p>We serve clients who value discretion, governance, and a considered approach to building their long-term presence.</p>
             </div>
             <div className="mt-8 grid gap-5 sm:grid-cols-3">
               <MiniTrust icon={Shield} title="Discretion" text="Always." />
               <MiniTrust icon={UserRound} title="One Point" text="of Contact." />
               <MiniTrust icon={Globe2} title="Cross-Border" text="Coordination." />
+            </div>
+          </div>
+        </div>
+      </AnimatedSection>
+
+      <AnimatedSection className="border-t border-black/10 bg-cream-soft py-16 md:py-20">
+        <div className="mx-auto max-w-[1180px] px-6">
+          <div className="mx-auto max-w-3xl text-center">
+            <SectionLabel>Core Positioning</SectionLabel>
+            <h2 className="mt-4 font-serif text-[34px] leading-tight text-charcoal md:text-[44px]">
+              One Relationship. Complete Coordination.
+            </h2>
+            <p className="mt-4 font-serif text-lg italic text-teal-deep md:text-xl">
+              We believe your UAE entry should be seamless, not fragmented.
+            </p>
+            <p className="mx-auto mt-6 max-w-[800px] text-[15px] leading-8 text-charcoal/80">
+              Wamira Global serves as your primary point of coordination, aligning the necessary legal, tax, banking, accounting, compliance, and professional services around your specific goals.
+            </p>
+            <div className="mx-auto mt-8 inline-flex flex-col items-center justify-center border-y border-gold-champagne/45 px-6 py-4 text-center sm:flex-row sm:gap-4 sm:py-3">
+              <span className="text-[14px] font-bold uppercase tracking-wider text-charcoal">You maintain one relationship.</span>
+              <span className="hidden h-4 w-px bg-gold-champagne/60 sm:block" />
+              <span className="text-[14px] font-bold uppercase tracking-wider text-teal-deep">We coordinate the ecosystem.</span>
             </div>
           </div>
         </div>
