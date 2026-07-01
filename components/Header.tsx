@@ -3,87 +3,54 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Menu, X } from "lucide-react";
-import { motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import Button from "@/components/Button";
 import MobileMenu from "@/components/MobileMenu";
-import { services } from "@/data/services";
 
 const links = [
-  { href: "/about", label: "About Us" },
-  { href: "/our-approach", label: "Our Approach" },
-  { href: "/resources", label: "Resources" },
-  { href: "/contact", label: "Contact Us" }
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/advisory", label: "Advisory" },
+  { href: "/structuring", label: "Structuring" },
+  { href: "/contact", label: "Contact" }
 ];
 
 export default function Header() {
   const pathname = usePathname() || "";
   const [open, setOpen] = useState(false);
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
-  const activeClass = (href: string) =>
-    pathname === href ? "text-gold-champagne" : "text-teal-deep hover:text-gold-champagne";
+  const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
   return (
-    <header className="fixed inset-x-0 top-0 z-40 border-b border-black/5 bg-ivory-warm/85 backdrop-blur-xl">
-      <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-5">
-        <Link href="/" aria-label="Wamira Global home" className="relative block h-20 w-20 shrink-0 overflow-hidden">
-          <Image src="/images/logo-removebg.png" alt="Wamira Global" fill priority sizes="80px" className="object-contain" />
+    <header className="fixed inset-x-0 top-0 z-40 border-b border-white/10 bg-teal-dark">
+      <div className="mx-auto flex h-[90px] max-w-[1440px] items-center justify-between px-6 md:px-16 xl:px-20">
+        <Link href="/" aria-label="Wamira Global home" className="relative block h-[66px] w-[285px] shrink-0 overflow-hidden max-md:h-16 max-md:w-52">
+          <Image src="/images/logo.png" alt="Wamira Global" fill priority sizes="285px" className="object-cover object-center brightness-110" />
         </Link>
-        <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
-          <Link href="/about" className={`transition ${activeClass("/about")}`}>About Us</Link>
-          <div
-            className="relative py-9"
-            onMouseEnter={() => setServicesDropdownOpen(true)}
-            onMouseLeave={() => setServicesDropdownOpen(false)}
-          >
+        <nav className="hidden items-center gap-[42px] text-[14px] font-semibold leading-none md:flex">
+          {links.map((link) => (
             <Link
-              href="/services"
-              onClick={() => setServicesDropdownOpen(false)}
-              onFocus={() => setServicesDropdownOpen(true)}
-              className={`flex items-center gap-1 transition ${pathname.startsWith("/services") ? "text-gold-champagne" : "text-teal-deep hover:text-gold-champagne"}`}
+              key={link.href}
+              href={link.href}
+              className={`relative pb-[9px] pt-2 transition ${isActive(link.href) ? "text-gold-champagne" : "text-white hover:text-gold-champagne"
+                }`}
             >
-              Services <ChevronDown className={`h-4 w-4 transition ${servicesDropdownOpen ? "rotate-180" : ""}`} />
-            </Link>
-            <motion.div
-              initial={false}
-              className={`absolute left-1/2 top-full w-72 -translate-x-1/2 rounded border border-gold/20 bg-white p-3 shadow-dark backdrop-blur-xl transition ${
-                servicesDropdownOpen
-                  ? "visible opacity-100"
-                  : "invisible pointer-events-none opacity-0"
-              }`}
-            >
-              {services.map((service) => (
-                <Link
-                  key={service.slug}
-                  href={`/services/${service.slug}`}
-                  onClick={() => setServicesDropdownOpen(false)}
-                  className="block rounded px-4 py-3 text-sm text-muted transition hover:bg-gold-champagne/10 hover:text-gold-champagne"
-                >
-                  {service.title}
-                </Link>
-              ))}
-            </motion.div>
-          </div>
-          {links.slice(1).map((link) => (
-            <Link key={link.href} href={link.href} className={`transition ${activeClass(link.href)}`}>
               {link.label}
+              {isActive(link.href) && (
+                <span className="absolute left-0 top-full h-px w-[34px] bg-gold-champagne" />
+              )}
             </Link>
           ))}
         </nav>
-        <div className="hidden md:block">
-          <Button href="/contact">Get In Touch</Button>
-        </div>
         <button
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((value) => !value)}
-          className="text-teal-deep md:hidden"
+          className="text-white md:hidden"
         >
           {open ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
         </button>
       </div>
-      <MobileMenu open={open} onClose={() => setOpen(false)} />
+      <MobileMenu open={open} onClose={() => setOpen(false)} links={links} />
     </header>
   );
 }

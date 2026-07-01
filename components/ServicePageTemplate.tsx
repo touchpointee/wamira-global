@@ -20,7 +20,8 @@ export default function ServicePageTemplate({ service }: { service: Service }) {
         </div>
         <div>
           <SectionLabel>What We Provide</SectionLabel>
-          <h2 className="font-serif text-4xl leading-tight text-teal-deep md:text-5xl">{service.fullDescription}</h2>
+          <h2 className="font-serif text-4xl leading-tight text-teal-deep md:text-5xl">{service.shortDescription}</h2>
+          <p className="mt-6 text-lg leading-8 text-charcoal/75">{service.fullDescription}</p>
           <div className="mt-8 grid gap-3 sm:grid-cols-2">
             {service.benefits.map((benefit) => (
               <div key={benefit} className="flex items-center gap-3 text-sm text-charcoal font-medium">

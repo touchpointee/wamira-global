@@ -1,53 +1,50 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { services } from "@/data/services";
 import { site } from "@/lib/utils";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/5 bg-teal-dark">
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+    <footer className="border-t border-white/10 bg-teal-dark">
+      <div className="mx-auto grid max-w-[1180px] gap-10 px-6 py-12 md:grid-cols-[1.6fr_0.8fr_1fr_1.2fr]">
         <div>
-          <div className="relative h-36 w-36 overflow-hidden">
-            <Image src="/images/logo.png" alt="Wamira Global" fill sizes="144px" className="object-contain filter brightness-110" />
+          <div className="relative h-24 w-72 overflow-hidden">
+            <Image src="/images/logo.png" alt="Wamira Global" fill sizes="288px" className="object-contain object-left brightness-110" />
           </div>
-          <p className="mt-5 max-w-sm text-sm leading-7 text-white/70">
-            Delivering bespoke corporate structuring and business setup solutions in the UAE with 
-            absolute discretion, precision, and excellence.
+          <p className="mt-6 max-w-sm text-sm leading-7 text-white/70">
+            Private Advisory. Strategic Impact. Built on trust. Driven by execution.
           </p>
-          <div className="mt-6 flex gap-4 text-gold-champagne">
-            <Linkedin className="h-5 w-5" />
-            <Instagram className="h-5 w-5" />
-            <Mail className="h-5 w-5" />
-          </div>
         </div>
-        <FooterColumn title="Quick Links" links={[
-          ["About Us", "/about"],
-          ["Services", "/services"],
-          ["Our Approach", "/our-approach"],
-          ["Resources", "/resources"],
-          ["Contact Us", "/contact"]
-        ]} />
-        <FooterColumn title="Core Services" links={[
-          ...services.slice(0, 4).map((service) => [service.title, `/services/${service.slug}`] as [string, string]),
-          ["View All", "/services"]
-        ]} />
+        <FooterColumn
+          title="Quick Links"
+          links={[
+            ["Home", "/"],
+            ["About", "/about"],
+            ["Advisory", "/advisory"],
+            ["Structuring", "/structuring"],
+            ["Contact", "/contact"]
+          ]}
+        />
+        <FooterColumn
+          title="Services"
+          links={services.map((service) => [service.title.replace("Strategic ", ""), `/services/${service.slug}`] as [string, string])}
+        />
         <div>
-          <h3 className="mb-5 font-semibold text-gold-champagne uppercase tracking-wider text-xs">Contact Us</h3>
+          <h3 className="mb-5 text-xs font-semibold uppercase tracking-[0.22em] text-gold-champagne">Contact</h3>
           <div className="space-y-4 text-sm text-white/70">
-            <p className="flex gap-3"><Mail className="h-5 w-5 text-gold-champagne shrink-0" /> {site.email}</p>
-            <p className="flex gap-3"><Phone className="h-5 w-5 text-gold-champagne shrink-0" /> {site.phone}</p>
-            <p className="flex gap-3"><MapPin className="h-5 w-5 text-gold-champagne shrink-0" /> {site.location}</p>
+            <p className="flex gap-3"><Mail className="h-5 w-5 shrink-0 text-gold-champagne" /> {site.email}</p>
+            <p className="flex gap-3"><Phone className="h-5 w-5 shrink-0 text-gold-champagne" /> {site.phone}</p>
+            <p className="flex gap-3"><MapPin className="h-5 w-5 shrink-0 text-gold-champagne" /> {site.location}</p>
           </div>
         </div>
       </div>
-      <div className="border-t border-white/5 py-6">
+      <div className="border-t border-white/10 py-6">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 text-sm text-white/55 md:flex-row md:items-center md:justify-between">
-          <p>© 2025 Wamira Global. All Rights Reserved.</p>
+          <p>© 2024 Wamira Global. All Rights Reserved.</p>
           <div className="flex gap-6">
-            <Link href="#" className="hover:text-white transition">Privacy Policy</Link>
-            <Link href="#" className="hover:text-white transition">Terms of Service</Link>
+            <Link href="#" className="transition hover:text-white">Privacy Policy</Link>
+            <Link href="#" className="transition hover:text-white">Terms of Use</Link>
           </div>
         </div>
       </div>
@@ -58,10 +55,10 @@ export default function Footer() {
 function FooterColumn({ title, links }: { title: string; links: [string, string][] }) {
   return (
     <div>
-      <h3 className="mb-5 font-semibold text-gold-champagne uppercase tracking-wider text-xs">{title}</h3>
+      <h3 className="mb-5 text-xs font-semibold uppercase tracking-[0.22em] text-gold-champagne">{title}</h3>
       <div className="space-y-3 text-sm text-white/70">
         {links.map(([label, href]) => (
-          <Link key={label} href={href} className="block transition hover:text-gold-champagne">
+          <Link key={`${label}-${href}`} href={href} className="block transition hover:text-gold-champagne">
             {label}
           </Link>
         ))}

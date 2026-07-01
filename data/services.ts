@@ -1,22 +1,14 @@
-import {
-  BriefcaseBusiness,
-  ShieldCheck,
-  Building,
-  Plane,
-  Home,
-  Users
-} from "lucide-react";
-import type React from "react";
+import { Building2, Handshake, Landmark, ShieldCheck, type LucideIcon } from "lucide-react";
 import { images } from "@/lib/utils";
 
 export type Service = {
   title: string;
   slug: string;
-  category: "Lifestyle" | "Family Office" | "Mobility" | "Support";
+  category: "Advisory" | "Structuring" | "Investment" | "Private";
   shortDescription: string;
   fullDescription: string;
   image: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: LucideIcon;
   benefits: string[];
   helpCards: { title: string; text: string }[];
   why: string;
@@ -27,132 +19,111 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    title: "Setup Strategy & Structure",
-    slug: "setup-strategy-structure",
-    category: "Support",
-    shortDescription: "Strategic evaluation of Mainland and Freezone options for optimal tax and legal structuring.",
-    fullDescription: "We evaluate your commercial operations to design the correct corporate framework, preventing expensive future restructuring.",
-    image: images.assets,
-    icon: BriefcaseBusiness,
+    title: "UAE Market Entry Advisory",
+    slug: "uae-market-entry-advisory",
+    category: "Advisory",
+    shortDescription: "We replace market-entry uncertainty with a clear, coordinated roadmap.",
+    fullDescription:
+      "From jurisdiction selection to licensing pathways, banking readiness, and operational setup, we coordinate the entry route that aligns with your commercial and personal objectives.",
+    image: images.skyline,
+    icon: Building2,
     benefits: [
-      "Mainland vs. Freezone strategic evaluation",
-      "Tax footprint optimization advisory",
-      "Legal structural insulation design",
-      "Future restructuring cost reduction"
+      "Jurisdiction selection",
+      "Licensing pathway coordination",
+      "Banking readiness",
+      "Operational setup alignment"
     ],
     helpCards: [
-      { title: "Jurisdiction Assessment", text: "Aligning operations with the best legal freezones or mainland setups." },
-      { title: "Compliance Blueprint", text: "Incorporating international tax standards from day one." },
-      { title: "Strategic Framework", text: "Customized planning for founders and corporate entities." }
+      { title: "Market Entry Roadmap", text: "A clear plan for entering the UAE with commercial intent." },
+      { title: "Professional Alignment", text: "Coordination across legal, banking, accounting, and compliance needs." },
+      { title: "Execution Clarity", text: "A single advisory relationship guiding each moving part." }
     ],
-    why: "A correct initial setup structure protects assets, optimizes tax alignment, and establishes a secure long-term business foundation.",
-    ctaTitle: "Establish a Resilient Foundation",
-    ctaText: "Discuss your target operations with the Principal.",
-    ctaButton: "Arrange a Consultation"
+    why: "The right market-entry route protects time, capital, and long-term optionality.",
+    ctaTitle: "Plan Your UAE Entry",
+    ctaText: "Replace uncertainty with a coordinated roadmap.",
+    ctaButton: "Schedule a Consultation"
   },
   {
-    title: "Company Formation & Compliance",
-    slug: "company-formation-compliance",
-    category: "Support",
-    shortDescription: "Complete corporate registration, licensing, and foundational UAE Corporate Tax alignment.",
-    fullDescription: "We handle the entire corporate registration, procurement of commercial licenses, and compliance structures under a single point of contact.",
+    title: "Strategic Entity Structuring",
+    slug: "strategic-entity-structuring",
+    category: "Structuring",
+    shortDescription: "A structure is the foundation of ownership, control, and continuity.",
+    fullDescription:
+      "We coordinate the architecture of your UAE presence, including operating companies, holding vehicles, and foundation-based structures, to ensure your setup supports your long-term vision.",
     image: images.office,
+    icon: Landmark,
+    benefits: [
+      "Operating company frameworks",
+      "Holding and SPV layers",
+      "Foundation-based structures",
+      "Continuity-focused ownership planning"
+    ],
+    helpCards: [
+      { title: "Ownership Clarity", text: "Structures designed around control, protection, and continuity." },
+      { title: "Governance Thinking", text: "Blueprints that support disciplined long-term decision making." },
+      { title: "Cross-Border Fit", text: "Alignment of UAE entities with wider international interests." }
+    ],
+    why: "A considered structure supports growth, protects continuity, and reduces future complexity.",
+    ctaTitle: "Structure for Long-Term Control",
+    ctaText: "Coordinate your operating, holding, and governance requirements.",
+    ctaButton: "Discuss Structuring"
+  },
+  {
+    title: "Strategic Investment Coordination",
+    slug: "strategic-investment-coordination",
+    category: "Investment",
+    shortDescription: "We support expansion through curated professional alignment and opportunity coordination.",
+    fullDescription:
+      "Our role is to simplify the process, helping you align the right partners and processes around your strategic goals while maintaining one clear point of contact.",
+    image: images.desk,
+    icon: Handshake,
+    benefits: [
+      "Curated professional alignment",
+      "Opportunity coordination",
+      "Partner process support",
+      "Single point of contact"
+    ],
+    helpCards: [
+      { title: "Strategic Alignment", text: "Partners and processes organized around your stated goals." },
+      { title: "Opportunity Coordination", text: "A considered path for evaluating expansion and investment options." },
+      { title: "Discreet Stewardship", text: "Communication and coordination handled with professional care." }
+    ],
+    why: "Strategic expansion depends on the right people, the right process, and accountable coordination.",
+    ctaTitle: "Coordinate Strategic Growth",
+    ctaText: "Align the right partners around your objectives.",
+    ctaButton: "Start the Conversation"
+  },
+  {
+    title: "Private Advisory",
+    slug: "private-advisory",
+    category: "Private",
+    shortDescription: "Ongoing strategic counsel for governance, expansion, and wealth-aligned business decisions.",
+    fullDescription:
+      "We provide discreet advisory coordination for founders, family offices, and investors who require clarity, confidentiality, and long-term stewardship.",
+    image: images.lounge,
     icon: ShieldCheck,
     benefits: [
-      "End-to-end registry management",
-      "Commercial license procurement",
-      "Corporate Tax registration & alignment",
-      "Regulatory compliance readiness"
+      "Discreet counsel",
+      "Governance coordination",
+      "Expansion support",
+      "Long-term stewardship"
     ],
     helpCards: [
-      { title: "Registration Support", text: "Full handling of government registry submissions and documentation." },
-      { title: "Licensing Coordination", text: "Securing active commercial operating licenses smoothly." },
-      { title: "Tax Compliance Setup", text: "Foundational alignment with active UAE Corporate Tax regulations." }
+      { title: "Confidential Advisory", text: "Private coordination for sensitive commercial and family-office matters." },
+      { title: "Governance Support", text: "Clear thinking around ownership, continuity, and decision frameworks." },
+      { title: "Long-Term Stewardship", text: "Available for ongoing coordination as your presence evolves." }
     ],
-    why: "A compliant corporate presence ensures longevity, respects regulatory standards, and readies your business for active trading.",
-    ctaTitle: "Secure Your Commercial License",
-    ctaText: "Let us manage the entire regulatory and registration framework.",
-    ctaButton: "Begin Formation"
-  },
-  {
-    title: "Banking Onboarding Coordination",
-    slug: "banking-onboarding-coordination",
-    category: "Support",
-    shortDescription: "Strategic bank selection and optimization of corporate profiles for compliance reviews.",
-    fullDescription: "We guide your corporate profile through strict banking onboarding processes, securing reliable setups for international flows.",
-    image: images.desk,
-    icon: Building,
-    benefits: [
-      "Strategic UAE bank selection",
-      "Corporate profile optimization",
-      "Compliance documentation assembly",
-      "Onboarding process coordination"
-    ],
-    helpCards: [
-      { title: "Bank Matching", text: "Selecting the correct banking partners for your specific transaction patterns." },
-      { title: "Profile Enhancement", text: "Structuring corporate profiles to satisfy strict compliance standard reviews." },
-      { title: "Frictionless Support", text: "Handling background checks and query resolutions directly." }
-    ],
-    why: "A stable corporate banking setup is the lifeblood of international operations, protecting your cash flow and commercial continuity.",
-    ctaTitle: "Establish Your Banking Setup",
-    ctaText: "Expert guidance through strict institutional onboarding reviews.",
-    ctaButton: "Speak With Us"
-  },
-  {
-    title: "Visas & Golden Residency",
-    slug: "visas-golden-residency",
-    category: "Mobility",
-    shortDescription: "Management of investor visas and Golden Residency through white-glove government channels.",
-    fullDescription: "We manage your executive residency and Golden Visa processes, bypassing lines and paper bottlenecks.",
-    image: images.jet,
-    icon: Plane,
-    benefits: [
-      "Golden Visa eligibility assessment",
-      "Investor residency coordination",
-      "White-glove government processing",
-      "Paperwork bottleneck resolution"
-    ],
-    helpCards: [
-      { title: "Golden Visa Pathways", text: "Assessing and structuring eligibility for 10-year residency." },
-      { title: "VIP Coordination", text: "Guided processing through medical screening and biometrics." },
-      { title: "Family Sponsorship", text: "Extending residency benefits smoothly to your dependents." }
-    ],
-    why: "Smooth residency processing ensures seamless mobility, personal security, and local alignment for corporate leadership.",
-    ctaTitle: "Secure Your Residency",
-    ctaText: "White-glove government processing for founders and key executives.",
-    ctaButton: "Arrange Residency"
-  },
-  {
-    title: "UAE Property Investment Advisory",
-    slug: "uae-property-investment-advisory",
-    category: "Support",
-    shortDescription: "Independent property selection and investment advisory tailored to your visa or wealth goals.",
-    fullDescription: "We provide pure portfolio coordination and independent real estate advisory, completely free from broker pressure.",
-    image: images.lounge,
-    icon: Home,
-    benefits: [
-      "Independent investment analysis",
-      "Yield & capital growth projections",
-      "Visa-compliant property mapping",
-      "Broker-pressure-free advisory"
-    ],
-    helpCards: [
-      { title: "Pure Advisory", text: "Offering unbiased investment analysis without selling properties as a broker." },
-      { title: "Yield Intelligence", text: "Providing clear, objective data on growth areas and rental returns." },
-      { title: "Asset Integration", text: "Linking property acquisitions to residency or wealth protection targets." }
-    ],
-    why: "Independent advice protects your capital from commission-driven recommendations, ensuring assets serve your true goals.",
-    ctaTitle: "Protect Your Wealth",
-    ctaText: "Curated, broker-free real estate advisory based on yields and data.",
-    ctaButton: "Discuss Investment"
+    why: "Complex decisions benefit from one discreet advisory relationship that understands the wider picture.",
+    ctaTitle: "Begin Private Advisory",
+    ctaText: "Discuss your objectives under strict professional confidentiality.",
+    ctaButton: "Request a Consultation"
   }
 ];
 
 export const trustFeatures = [
-  { title: "Absolute Discretion", text: "Your privacy is our priority", icon: ShieldCheck },
-  { title: "Global Network", text: "Local expertise, worldwide", icon: Plane },
-  { title: "Tailored Solutions", text: "Designed around your life", icon: BriefcaseBusiness },
-  { title: "Principal Accountability", text: "Direct point of senior contact", icon: Users }
+  { title: "Discretion", text: "Your objectives, information, and plans are always protected.", icon: ShieldCheck },
+  { title: "One Point of Contact", text: "A senior advisor coordinates every aspect on your behalf.", icon: Handshake },
+  { title: "Cross-Border Coordination", text: "Alignment between UAE requirements and global interests.", icon: Building2 }
 ];
 
 export function getService(slug: string) {

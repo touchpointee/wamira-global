@@ -11,7 +11,7 @@ type Props = {
 
 const styles = {
   primary:
-    "bg-teal-deep text-white shadow-md hover:bg-gold-champagne hover:-translate-y-0.5",
+    "bg-gold-champagne text-teal-dark shadow-md hover:bg-white hover:-translate-y-0.5",
   secondary:
     "border border-teal-deep text-teal-deep hover:bg-teal-deep/5 hover:-translate-y-0.5"
 };

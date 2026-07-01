@@ -13,8 +13,9 @@ export const site = {
 };
 
 export const images = {
-  hero: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2200&q=80",
-  skyline: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=2200&q=80",
+  hero: "/images/wamira-hero-dubai.png",
+  skyline: "/images/wamira-hero-dubai.png",
+  terrace: "/images/wamira-terrace-dubai.png",
   office: "https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&w=1600&q=80",
   lounge: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=80",
   desk: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1600&q=80",

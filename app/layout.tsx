@@ -19,15 +19,15 @@ const sans = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
   title: {
-    default: "Wamira Global | Private Office & Concierge Services",
+    default: "Wamira Global | Strategic UAE Market Entry & Structuring",
     template: "%s | Wamira Global"
   },
   description:
-    "Wamira Global delivers bespoke private office, concierge, family office, and global mobility solutions with discretion, precision, and excellence.",
+    "Strategic UAE market entry, structuring, and private coordination for founders, family offices, and investors.",
   openGraph: {
-    title: "Wamira Global | Private Office & Concierge Services",
+    title: "Wamira Global | Strategic UAE Market Entry & Structuring",
     description:
-      "Bespoke private office, concierge, family office, and global mobility solutions with discretion and excellence.",
+      "Strategic UAE market entry, structuring, and private coordination for founders, family offices, and investors.",
     url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
     siteName: "Wamira Global",
     images: [{ url: "/images/logo-removebg.png", width: 1200, height: 630 }],
