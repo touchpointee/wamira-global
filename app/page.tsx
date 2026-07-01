@@ -64,31 +64,31 @@ const reasons = [
 export default function HomePage() {
   return (
     <>
-      <section className="relative mt-[90px] h-[calc(100svh-90px)] min-h-[620px] overflow-hidden bg-teal-dark">
+      <section className="relative mt-[90px] flex min-h-[calc(100svh-90px)] items-center bg-teal-dark py-12 md:py-16 lg:h-[calc(100svh-90px)] lg:min-h-[620px] lg:py-0 overflow-hidden">
         <Image src={images.hero} alt="Dubai skyline with Burj Khalifa" fill priority className="object-cover object-[68%_center]" />
         <div className="absolute inset-0 bg-gradient-to-r from-teal-dark via-teal-dark/90 to-teal-dark/30" />
         <div className="absolute inset-y-0 left-0 w-[58%] bg-teal-dark/45" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_46%_44%,rgba(255,255,255,0.08),transparent_18%),radial-gradient(circle_at_62%_50%,rgba(201,154,95,0.12),transparent_26%)]" />
         <div className="absolute left-[34%] top-0 hidden h-full w-[38%] rounded-full border-[70px] border-white/[0.035] lg:block" />
-        <div className="relative z-10 mx-auto flex h-full max-w-[1440px] items-center px-6 pb-8 md:px-16 xl:px-20">
+        <div className="relative z-10 mx-auto flex w-full max-w-[1440px] items-center px-6 pb-8 md:px-16 xl:px-20 lg:h-full">
           <div className="w-full max-w-[760px]">
             <div className="mb-5 flex items-center gap-4">
               <span className="h-px w-12 bg-gold-champagne" />
-              <p className="text-[13px] font-bold uppercase tracking-[0.24em] text-gold-champagne">
+              <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-gold-champagne sm:text-[13px]">
                 Private Advisory. Strategic Impact.
               </p>
             </div>
-            <h1 className="max-w-[760px] font-serif text-[36px] leading-[1.04] text-white md:text-[46px] lg:text-[52px] xl:text-[56px]">
+            <h1 className="max-w-[760px] font-serif text-[28px] xs:text-[32px] sm:text-[38px] leading-[1.1] text-white md:text-[46px] lg:text-[52px] xl:text-[56px]">
               Strategic <span className="text-gold-champagne">UAE</span> Market Entry,
               <br />
               Structuring & Investment
               <br />
               Coordination
             </h1>
-            <p className="mt-7 max-w-[600px] text-[15px] leading-8 text-white/90">
+            <p className="mt-5 max-w-[600px] text-[14px] leading-relaxed text-white/90 sm:mt-7 sm:text-[15px] sm:leading-8">
               Wamira Global is a private advisory office guiding founders, family offices, and HNI investors through market entry, structuring, and investment opportunities across the UAE.
             </p>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4">
               <Button href="/advisory" className="min-w-[136px] justify-center px-6 text-[12px] uppercase tracking-[0.14em]">Our Advisory</Button>
               <Button href="/contact" variant="secondary" className="min-w-[270px] justify-center border-gold-champagne px-6 text-[12px] text-white hover:bg-gold-champagne/10 uppercase tracking-[0.14em]">
                 Schedule a Private Consultation
