@@ -93,7 +93,7 @@ export default function HomePage() {
             </div>
 
             {/* Paragraph copy */}
-            <div className="mt-8 pl-6 sm:pl-8 max-w-[620px] space-y-4 text-[14px] leading-relaxed text-white/80 sm:mt-9 sm:text-[15px] sm:leading-8">
+            <div className="mt-8 max-w-[620px] space-y-4 text-[14px] leading-relaxed text-white/80 sm:mt-9 sm:text-[15px] sm:leading-8">
               <p>
                 Wamira Global provides strategic coordination for founders, family offices, and investors entering the UAE.
               </p>
@@ -106,7 +106,7 @@ export default function HomePage() {
             </div>
 
             {/* Call to Actions */}
-            <div className="mt-8 pl-6 sm:pl-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:gap-4">
+            <div className="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:gap-4">
               <Button href="/advisory" className="min-w-[136px] justify-center px-6 text-[12px] uppercase tracking-[0.14em]">Our Advisory</Button>
               <Button href="/contact" variant="secondary" className="min-w-[270px] justify-center border-gold-champagne px-6 text-[12px] text-white hover:bg-gold-champagne/10 uppercase tracking-[0.14em]">
                 Schedule a Private Consultation
