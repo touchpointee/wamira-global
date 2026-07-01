@@ -75,7 +75,7 @@ export default function HomePage() {
             <div className="mb-5 flex items-center gap-4">
               <span className="h-px w-12 bg-gold-champagne" />
               <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-gold-champagne sm:text-[13px]">
-                Strategic UAE Market Entry, Structuring & Private Coordination
+                The Legacy Standard <span className="text-white/40 font-normal">|</span> Strategic UAE Market Entry, Structuring & Private Coordination
               </p>
             </div>
             <h1 className="max-w-[760px] font-serif text-[28px] xs:text-[32px] sm:text-[38px] leading-[1.1] text-white md:text-[46px] lg:text-[52px] xl:text-[56px]">
