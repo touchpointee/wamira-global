@@ -72,18 +72,21 @@ export default function HomePage() {
         <div className="absolute left-[34%] top-0 hidden h-full w-[38%] rounded-full border-[70px] border-white/[0.035] lg:block" />
         <div className="relative z-10 mx-auto flex w-full max-w-[1440px] items-center px-6 pb-8 md:px-16 xl:px-20 lg:h-full">
           <div className="w-full max-w-[760px]">
-            <div className="mb-5 flex items-center gap-4">
-              <span className="h-px w-12 bg-gold-champagne" />
-              <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-gold-champagne sm:text-[13px]">
-                The Legacy Standard <span className="text-white/40 font-normal">|</span> Strategic UAE Market Entry, Structuring & Private Coordination
+            <div className="mb-5 flex items-center gap-3">
+              <span className="h-px w-8 bg-gold-champagne" />
+              <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-gold-champagne sm:text-[12px]">
+                The Legacy Standard
               </p>
             </div>
-            <h1 className="max-w-[760px] font-serif text-[28px] xs:text-[32px] sm:text-[38px] leading-[1.1] text-white md:text-[46px] lg:text-[52px] xl:text-[56px]">
+            <h1 className="max-w-[760px] font-serif text-[32px] xs:text-[36px] sm:text-[40px] leading-[1.08] text-white md:text-[48px] lg:text-[54px] xl:text-[60px]">
               Strategic UAE Entry.
               <br />
               Built for Legacy.
             </h1>
-            <div className="mt-5 max-w-[600px] space-y-4 text-[14px] leading-relaxed text-white/90 sm:mt-7 sm:text-[15px] sm:leading-8">
+            <p className="mt-4 text-[13px] font-semibold uppercase tracking-wider text-gold-champagne/90 sm:text-[14px] max-w-[680px]">
+              Strategic UAE Market Entry, Structuring & Private Coordination
+            </p>
+            <div className="mt-6 max-w-[600px] space-y-4 text-[14px] leading-relaxed text-white/80 sm:mt-7 sm:text-[15px] sm:leading-8">
               <p>
                 Wamira Global provides strategic coordination for founders, family offices, and investors entering the UAE.
               </p>
